@@ -31,7 +31,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add logs/
-          git commit -m "Update fortune log" || echo "No changes to commit"
           git commit -m "Update fortune log" || exit 0　
           git pull --rebase origin main
           git push origin main

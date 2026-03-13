@@ -3,6 +3,7 @@ from pathlib import Path
 import csv
 import random
 
+
 fortunes = [
     ("大吉", "今日は集中力が高い日。短い復習を1つ片づけると流れが良くなります。"),
     ("中吉", "定義を1つ丁寧に見直すと理解が深まります。"),

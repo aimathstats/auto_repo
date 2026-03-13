@@ -1,4 +1,4 @@
-name: Fortune every 10 minutes
+name: Fortune every 5 minutes
 
 on:
   schedule:

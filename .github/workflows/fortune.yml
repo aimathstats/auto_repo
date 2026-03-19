@@ -3,7 +3,7 @@ name: Fortune every 5 minutes
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'  # 5分おき
+    - cron: '0 * * * *'  
 
 permissions:
   contents: write

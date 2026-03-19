@@ -8,7 +8,7 @@ response = client.messages.create(
     model="claude-haiku-4-5-20251001",
     max_tokens=200,
     messages=[
-        {"role": "user", "content": "日本語で自己紹介してください。また、arxivの論文要約はどれくらいできるのかも短く述べてください。"}
+        {"role": "user", "content": "日本語で自己紹介しつつ、arxivの論文要約はどれくらいできるのか２行で述べてください。"}
     ]
 )
 

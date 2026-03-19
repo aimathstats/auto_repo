@@ -1,0 +1,31 @@
+name: 自己紹介生成
+
+on:
+  workflow_dispatch:  # 手動実行ボタンで起動
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pythonセットアップ
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: anthropicインストール
+        run: pip install anthropic
+
+      - name: スクリプト実行
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python generate.py
+
+      - name: mdファイルをcommit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add output.md
+          git commit -m "自己紹介を自動生成 $(date +%Y-%m-%d)"
+          git push

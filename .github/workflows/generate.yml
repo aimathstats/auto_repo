@@ -1,7 +1,10 @@
 name: 自己紹介生成
 
 on:
-  workflow_dispatch:  # 手動実行ボタンで起動
+  workflow_dispatch:
+
+permissions:        # ← これを追加
+  contents: write   # ← これを追加
 
 jobs:
   generate:
